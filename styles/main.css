@@ -40,17 +40,17 @@ hr {
     z-index: 1;
 }
 
-.headerBar a {
-    text-decoration: none;
-    color: #f0f0f0;
-}
-
 .headerBar h1 {
     grid-area: title;
     margin: 0 32px 0 32px;
     align-self: center;
     font-size: 3rem;
     transition: font-size 500ms;
+}
+
+.headerBar h1 a {
+    text-decoration: none;
+    color: #f0f0f0;
 }
 
 .headerBar nav {
@@ -66,13 +66,30 @@ hr {
 }
 
 .headerBar nav a {
-    transition: all 200ms;
+    position: relative;
+    text-decoration: none;
+    color: #f0f0f0;
+    transition: color 200ms;
+}
+
+.headerBar nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+    height: 2px;
+    background-color: #ffd500;
+    transform: scaleX(0);
+    transition: transform 200ms ease;
 }
 
 .headerBar nav a:hover {
-    text-shadow: 0 0 2px white;
-    transition: all 100ms;
-    font-size: 1.1rem;
+    color: #ffd500;
+}
+
+.headerBar nav a:hover::after {
+    transform: scaleX(1.1);
 }
 
 /* Página Inicio */
@@ -305,9 +322,6 @@ hr {
 /* Tablets */
 
 @media (max-width: 770px) {
-    body {
-        font-size: 0.9rem;
-    }
 
     .headerBar h1 {
         font-size: 2rem;
@@ -315,13 +329,12 @@ hr {
     }
     
     .headerBar nav{
-        font-size: 0.75rem;
         gap: 0.75rem;
         margin: 0 1rem 0 1rem;
     }
-    
-    .headerBar nav a:hover {
-        font-size: .85rem;
+
+    .headerBar nav a {
+        font-size: 0.75rem;
     }
 
     .mainArticles {
@@ -395,7 +408,7 @@ hr {
     }
 
     .headerBar nav a {
-        font-size: 1rem;
+        font-size: 0.75rem;
     }
     
     #visitedCountries ol {
