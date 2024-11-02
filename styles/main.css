@@ -92,6 +92,14 @@ hr {
     transform: scaleX(1.1);
 }
 
+.headerBar nav a.nav-active {
+    color: #ffd500;
+}
+
+.headerBar nav a.nav-active::after {
+    transform: scaleX(1.1);
+}
+
 /* Página Inicio */
 
 .content {
