@@ -1,4 +1,12 @@
-.container {
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+#container {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     display: grid;
@@ -9,25 +17,37 @@
     "header header header"
     "main main main"
     "footer footer footer";
-    background: #f0f0f0;
+    background-color: #f0f0f0;
+    color: black;
     cursor: default;
     animation: font-size 500ms;
+    transition: background-color 200ms, color 200ms;
 }
 
-hr {
+#container.dark-mode {
+    background-color: #2e2e2e;
+    color: white
+}
+
+.divider {
     border: 1px solid black;
     width: 75%;
     max-width: 1500px;
     margin: 56px 68px 0;
     padding: 0;
     justify-self: center;
+    transition: border 200ms;
+}
+
+.divider.dark-mode {
+    border: 1px solid white
 }
 
 .headerBar {
     grid-area: header;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "title title nav";
+    grid-template-columns: repeat(2, 1fr) 0.1fr;
+    grid-template-areas: "title nav config";
     background: #222;
     padding: 12px 0;
     position: sticky;
@@ -48,9 +68,14 @@ hr {
     transition: font-size 500ms;
 }
 
-.headerBar h1 a {
+#mainTitle {
     text-decoration: none;
     color: #f0f0f0;
+    transition: color 200ms;
+}
+
+#mainTitle.dark-mode {
+    color: #ffd500;
 }
 
 .headerBar nav {
@@ -58,7 +83,7 @@ hr {
     justify-self: end;
     align-self: center;
     align-items: center;
-    margin: 0 32px 0 32px;
+    margin: 0 16px 0 16px;
     display: flex;
     gap: 32px;
     font-size: 1rem;
@@ -100,6 +125,84 @@ hr {
     transform: scaleX(1.1);
 }
 
+#configButton {
+    grid-area: config;
+    margin: 0 32px 0 8px;
+    padding: 0;
+    font-size: 16px;
+    width: 25px;
+    height: 25px;
+    align-self: center;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #f0f0f0;
+    cursor: pointer;
+    transition: transform 50ms, color 200ms;
+}
+
+#configButton.dark-mode {
+    color: #ffd500;
+}
+
+#configButton:active {
+    transform: scale(0.94);
+}
+
+#configMenu {
+    display: flex;
+    flex-direction: column;
+    top: 50px;
+    right: 20px;
+    background-color: #333;
+    border-radius: 4px;
+    position: absolute;
+    visibility: hidden;
+    top: 58px;
+    right: 34px;
+    color: white;
+    box-shadow: 2px 2px 8px #00000077;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+#configMenu.show {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+}
+
+#configMenu p {
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 0;
+    padding: 6px 2px 6px;
+    background-color: #333;
+}
+
+#configMenu button {
+    border: none;
+    background-color: #222;
+    color: white;
+    font-size: 0.7rem;
+    width: 120px;
+    height: 20px;
+    transition: background-color 200ms, color 200ms;
+    text-align: left;
+    padding-left: 10px;
+}
+
+#configMenu button:nth-child(odd) {
+    background-color: #292929;
+}
+
+#configMenu button:hover {
+    background-color: #ffd500;
+    color: #222;
+    cursor: pointer;
+}
+
 /* Página Inicio */
 
 .content {
@@ -133,25 +236,31 @@ hr {
 
 .mainArticles a {
     text-decoration: none;
-    color: black
+    color: black;
 }
 
-.mainArticles a article {
+.eachMainArticles {
     border: 2px;
     border-radius: 16px;
     box-shadow: 0 0 2px black;
-    background: #f7f7f7;
+    background-color: #f7f7f7;
     padding: 1px 24px 6px;
-    transition: transform 200ms ease-in-out;
+    transition: transform 200ms ease-in-out, background-color 200ms;
 }
 
-.mainArticles a article:hover {
+.eachMainArticles.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.eachMainArticles:hover {
     transform: scale(1.03);
     transition: transform 100ms ease-in-out;
 }
 
-.mainArticles a article h4 {
+.eachMainArticles h4 {
     text-align: center;
+    font-size: 1.2rem;
 }
 
 #visitedCountries ol {
@@ -208,29 +317,34 @@ hr {
     margin: 48px auto 48px;
 }
 
-.contentBlog article {
+.blogArticles {
     border: 2px;
     border-radius: 16px;
     box-shadow: 0 0 2px black;
-    background: #f7f7f7;
+    background-color: #f7f7f7;
     padding: 24px;
     margin: 0 48px 0;
     animation: revealT ease-in both;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
+    transition: background-color 200ms;
 }
 
-.contentBlog article header h3 {
+.blogArticles.dark-mode {
+    background-color: #222;
+}
+
+.blogArticles header h3 {
     margin: 8px 0 32px;
     text-align: center;
     font-size: 2rem;
 }
 
-.contentBlog article h4 {
+.blogArticles h4 {
     margin: 24px 0 16px;
 }
 
-.contentBlog  article p {
+.blogArticles p {
     white-space: pre-line;
     margin: 0;
     padding: 0;
@@ -247,7 +361,6 @@ hr {
     "mainParagraf mainParagraf contactInfo";
     max-width: 1920px;
     margin: 0 auto;
-    background: #f0f0f0;
 }
 
 .contentAboutMe p {
@@ -257,7 +370,7 @@ hr {
     white-space: pre-line;
 }
 
-.contentAboutMe #contactInfo {
+#contactInfo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -265,7 +378,7 @@ hr {
     gap: 16px;
 }
 
-.contentAboutMe #contactInfo img {
+#contactInfo img {
     grid-area: profilePicture;
     width: 250px;
     height: auto;
@@ -275,12 +388,12 @@ hr {
     transition: transform 100ms ease-in-out, margin 500ms;
 }
 
-.contentAboutMe #contactInfo img:hover {
+#contactInfo img:hover {
     transform: scale(1.05);
     transition: transform 200ms ease-in-out;
 }
 
-.contentAboutMe #contactInfo p {
+#contactInfoP {
     width: 250px;
     grid-area: contactInfo;
     display: flex;
@@ -291,24 +404,32 @@ hr {
     border-radius: 16px;
     padding: 24px 16px 24px 34px;
     box-sizing: border-box;
-    background: #f7f7f7;
+    background-color: #f7f7f7;
     box-shadow: 0 0 2px #000;
-    transition: transform 100ms ease-in-out;
+    transition: transform 100ms ease-in-out, backgroud-color 200ms;
 }
 
-.contentAboutMe #contactInfo p:hover {
+#contactInfoP.dark-mode {
+    background-color: #222;
+}
+
+#contactInfoP:hover {
     transform: scale(1.05);
     transition: transform 200ms ease-in-out;
 }
 
-.contentAboutMe #contactInfo p a {
+.contactInfoLink {
     white-space: nowrap;
     text-decoration: none;
     color: black;
-    transition: color 300ms ease-in-out;
+    transition: color 200ms;
 }
 
-.contentAboutMe #contactInfo p a:hover {
+.contactInfoLink.dark-mode {
+    color:white
+}
+
+.contactInfoLink:hover {
     color: #0051ff;
 }
 
@@ -333,16 +454,25 @@ hr {
 
     .headerBar h1 {
         font-size: 2rem;
-        margin: 0 1rem 0 1rem;
+        margin: 0 16px 0 17px;
     }
     
     .headerBar nav{
-        gap: 0.75rem;
-        margin: 0 1rem 0 1rem;
+        gap: 24px;
+        margin: 0 16px 0 16px;
     }
 
     .headerBar nav a {
-        font-size: 0.75rem;
+        font-size: 0.95rem;
+    }
+
+    #configButton {
+        margin: 0 16px 0 8px;
+    }
+
+    #configMenu {
+        top: 48px;
+        right: 16px;
     }
 
     .mainArticles {
@@ -396,13 +526,13 @@ hr {
 
 @media (max-width: 470px) {
 
-    hr {
+    .divider {
         margin: 56px 32px 0;
     }
 
     .headerBar {
         grid-template-areas: "title title title" "nav nav nav";
-        gap: 16px;
+        gap: 32px;
     }
 
     .headerBar h1 {
@@ -416,7 +546,17 @@ hr {
     }
 
     .headerBar nav a {
-        font-size: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    #configButton {
+        position: fixed;
+        top: 22px;
+        right: 0px;
+    }
+
+    #configMenu {
+        top: 52px;
     }
     
     #visitedCountries ol {
