@@ -73,7 +73,8 @@
     transition: color 200ms;
 }
 
-#mainTitle.dark-mode {
+#mainTitle.dark-mode,
+#mainTitle:hover {
     color: #ffd500;
 }
 
@@ -137,14 +138,12 @@
     background-color: transparent;
     color: #f0f0f0;
     transition: transform 50ms, color 200ms;
-}
-
-#configButton.dark-mode {
-    color: #ffd500;
-}
-
-#configButton:hover {
     cursor: pointer;
+}
+
+#configButton.dark-mode,
+#configButton:hover {
+    color: #ffd500;
 }
 
 #configButton:active {
@@ -227,7 +226,7 @@
     color: #222;
 }
 
-/* Página Inicio */
+/* Home */
 
 .content {
     display: grid;
@@ -256,6 +255,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
     padding: 0 48px;
+    margin: 0;
 }
 
 .mainArticles a {
@@ -330,7 +330,7 @@
     box-shadow: 0 0 2px black;
 }
 
-/* Página Blog */
+/* Articles */
 
 .contentBlog {
     display: grid;
@@ -374,7 +374,7 @@
     padding: 0;
 }
 
-/* Página Sobre mí */
+/* Aboutme */
 
 .contentAboutMe {
     display: grid;
@@ -501,6 +501,7 @@
 
     .mainArticles {
         grid-template-columns: 1fr;
+        padding: 0 24px;
     }
 
     #visitedCountries ol {
@@ -509,6 +510,10 @@
     
     .homeImages {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .blogArticles {
+        margin: 0 24px 0;
     }
 
     .contentAboutMe {
@@ -582,6 +587,10 @@
     #configMenu {
         top: 52px;
     }
+
+    .mainArticles {
+        padding: 0 12px;
+    }
     
     #visitedCountries ol {
         grid-template-columns: repeat(2, 1fr);
@@ -593,6 +602,10 @@
 
     .contentBlog:first-of-type {
         margin: 6px auto 48px;
+    }
+
+    .blogArticles {
+        margin: 0 12px 0;
     }
 
     .contentAboutMe #contactInfo {
