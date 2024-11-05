@@ -11,16 +11,18 @@
 
         <meta property="og:title" content="n48dev's Blog">
         <meta property="og:description" content="Una breve descripción de mí, junto a mi información de contacto.">
-        <meta property="og:image" content="assets/images/me/me.jpg">
+        <meta property="og:image" content="../assets/images/me/me.jpg">
         <meta property="og:image:alt" content="Una selfie de Anthony Buitrago">
 
-        <link rel="canonical" href="https://n48dev.github.io/blog/index.html">
+        <link rel="canonical" href="https://n48dev.github.io/blog/es/aboutme.html">
+        <link rel="alternate" hreflang="en" href="https://n48dev.github.io/blog/en/aboutme.html">
+        <link rel="alternate" hreflang="de" href="https://n48dev.github.io/blog/de/aboutme.html">
         
         <meta name="theme-color" content="#222">
-        <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
 
-        <link rel="stylesheet" type="text/css" href="styles/main.css">
-        <script src="scripts/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="../assets/styles/main.css">
+        <script src="../assets/scripts/main.js"></script>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=settings" />
 
@@ -36,8 +38,7 @@
             <nav>
                 <a href="index.html">Inicio</a>
                 <a href="articles.html">Artículos</a>
-                <a 
-                href="aboutme.html" class="nav-active">Sobre mí</a>
+                <a href="aboutme.html" class="nav-active">Sobre mí</a>
             </nav>
 
             <button id="configButton"><span class="material-symbols-outlined">settings</span></button>
@@ -46,6 +47,10 @@
                 <button id="themeAutomatic">Tema automático</button>
                 <button id="themeLight">Tema claro</button>
                 <button id="themeDark">Tema oscuro</button>
+                <p>Idioma:</p>
+                <a href="../en/aboutme.html" id="langEN">Inglés</a>
+                <a href="aboutme.html" id="langES">Español</a>
+                <a href="../de/aboutme.html" id="langDE">Alemán</a>
             </div>
         </header>
 
@@ -63,7 +68,7 @@
                 <img
                 title="Selfie de Anthony" 
                 alt="Una selfie de Anthony Buitrago" 
-                src="assets/images/me/me.jpg">
+                src="../assets/images/me/me.jpg">
 
                 <p id="contactInfoP"><a class="contactInfoLink" href="mailto:n48dev@gmail.com" target="_blank">📬 &nbsp;n48dev@gmail.com</a>
                 
