@@ -1,90 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Sobre mí | n48dev</title>
+    <meta name="description" content="Una breve descripción de mí, junto a mi información de contacto.">
+
+    <meta property="og:title" content="n48dev's Blog">
+    <meta property="og:description" content="Una breve descripción de mí, junto a mi información de contacto.">
+    <meta property="og:image" content="../assets/images/me/me.jpg">
+    <meta property="og:image:alt" content="Una selfie de Anthony Buitrago">
+
+    <link rel="canonical" href="https://n48dev.github.io/blog/es/aboutme.html">
+    <link rel="alternate" hreflang="en" href="https://n48dev.github.io/blog/en/aboutme.html">
+    <link rel="alternate" hreflang="de" href="https://n48dev.github.io/blog/de/aboutme.html">
     
-    <head>
+    <meta name="theme-color" content="#222">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="../assets/styles/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=settings" />
+</head>
+<body id="container">
+    <header class="headerBar">
+        <h1><a id="mainTitle" href="index.html">n48dev</a></h1>
 
-        <title>Sobre mí | n48dev</title>
-        <meta name="description" content="Una breve descripción de mí, junto a mi información de contacto.">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="articles.html">Artículos</a>
+            <a href="aboutme.html" class="nav-active">Sobre mí</a>
+        </nav>
 
-        <meta property="og:title" content="n48dev's Blog">
-        <meta property="og:description" content="Una breve descripción de mí, junto a mi información de contacto.">
-        <meta property="og:image" content="../assets/images/me/me.jpg">
-        <meta property="og:image:alt" content="Una selfie de Anthony Buitrago">
-
-        <link rel="canonical" href="https://n48dev.github.io/blog/es/aboutme.html">
-        <link rel="alternate" hreflang="en" href="https://n48dev.github.io/blog/en/aboutme.html">
-        <link rel="alternate" hreflang="de" href="https://n48dev.github.io/blog/de/aboutme.html">
+        <button id="configButton"><span class="material-symbols-outlined">settings</span></button>
+        <div id="configMenu" class="hiddenDefault">
+            <p>Aspecto:</p>
+            <button id="themeAutomatic">Tema automático</button>
+            <button id="themeLight">Tema claro</button>
+            <button id="themeDark">Tema oscuro</button>
+            <p>Idioma:</p>
+            <a href="../en/aboutme.html" id="langEN">Inglés</a>
+            <a href="aboutme.html" id="langES">Español</a>
+            <a href="../de/aboutme.html" id="langDE">Alemán</a>
+        </div>
+    </header>
+    <main class="contentAboutMe">
+        <p>Hola! me llamo Anthony Buitrago y soy un apasionado del mundo digital. Desde que era niño, siempre he sentido curiosidad por cómo funcionan las cosas, especialmente en el ámbito de la tecnología. Este interés me llevó a adentrarme en el mundo de la programación, un campo que me ha permitido canalizar mi creatividad y amor por resolver problemas. Soy un programador amateur con conocimientos en HTML, CSS, JavaScript, C++ y Python. Aunque aún me considero un aprendiz en este vasto universo, disfruto enfrentando nuevos retos y aprendiendo constantemente. Cada nuevo lenguaje, framework o concepto que descubro me abre una puerta a posibilidades infinitas, y es algo que me motiva a seguir mejorando mis habilidades.
         
-        <meta name="theme-color" content="#222">
-        <link rel="icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
+        Una de las cosas que más me gusta de la programación es su capacidad para convertir ideas en realidades tangibles. Desde pequeñas aplicaciones hasta sitios web completos, cada proyecto en el que trabajo es una oportunidad para crear algo único y funcional. Mi enfoque siempre ha sido escribir código limpio, eficiente y fácil de mantener, lo que me permite trabajar de manera efectiva y escalable.Además de la programación, soy un aficionado a la fotografía de naturaleza. Explorar el mundo a través del lente de una cámara es una de mis grandes pasiones. La fotografía me ha enseñado a observar los detalles, a tener paciencia y a apreciar la belleza de lo cotidiano. He tenido la suerte de viajar a varios países, lo que me ha permitido capturar paisajes impresionantes y momentos únicos en diferentes rincones del mundo.
+        
+        Mis viajes me han llevado a conocer culturas diversas y personas con formas de pensar y vivir muy diferentes a las mías. Este intercambio cultural me ha ayudado a ampliar mi visión del mundo y a entenderlo de una manera completamente distinta. Creo firmemente que viajar y explorar nuevas realidades nos convierte en personas más empáticas y conscientes, y esa perspectiva la aplico tanto en mi vida personal como en mi trabajo. Me considero una persona comprometida con mi crecimiento personal y profesional. Siempre busco aprender algo nuevo cada día, ya sea a través de la tecnología, la fotografía o mis experiencias de vida. Me esfuerzo por mejorar y por contribuir, de alguna manera, a crear un impacto positivo en los proyectos en los que participo y en las personas que me rodean.
+        
+        Si te gustaría ponerte en contacto conmigo para hablar sobre oportunidades de colaboración, intercambiar ideas o simplemente compartir una conversación interesante, no dudes en hacerlo. Estoy abierto a conectar con otros apasionados por la tecnología, la creatividad y el aprendizaje continuo.</p>
 
-        <link rel="stylesheet" type="text/css" href="../assets/styles/main.css">
-        <script src="../assets/scripts/main.js"></script>
+        <section id="contactInfo">
+            <img
+            title="Selfie de Anthony" 
+            alt="Una selfie de Anthony Buitrago" 
+            src="../assets/images/me/me.jpg">
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=settings" />
-
-        <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
-
-    </head>
-
-    <body id="container">
-
-        <header class="headerBar">
-            <h1><a id="mainTitle" href="index.html">n48dev</a></h1>
-
-            <nav>
-                <a href="index.html">Inicio</a>
-                <a href="articles.html">Artículos</a>
-                <a href="aboutme.html" class="nav-active">Sobre mí</a>
-            </nav>
-
-            <button id="configButton"><span class="material-symbols-outlined">settings</span></button>
-            <div id="configMenu" class="hiddenDefault">
-                <p>Aspecto:</p>
-                <button id="themeAutomatic">Tema automático</button>
-                <button id="themeLight">Tema claro</button>
-                <button id="themeDark">Tema oscuro</button>
-                <p>Idioma:</p>
-                <a href="../en/aboutme.html" id="langEN">Inglés</a>
-                <a href="aboutme.html" id="langES">Español</a>
-                <a href="../de/aboutme.html" id="langDE">Alemán</a>
-            </div>
-        </header>
-
-        <main class="contentAboutMe">
+            <p id="contactInfoP"><a class="contactInfoLink" href="mailto:n48dev@gmail.com" target="_blank">📬 &nbsp;n48dev@gmail.com</a>
             
-            <p>Hola! me llamo Anthony Buitrago y soy un apasionado del mundo digital. Desde que era niño, siempre he sentido curiosidad por cómo funcionan las cosas, especialmente en el ámbito de la tecnología. Este interés me llevó a adentrarme en el mundo de la programación, un campo que me ha permitido canalizar mi creatividad y amor por resolver problemas. Soy un programador amateur con conocimientos en HTML, CSS, JavaScript, C++ y Python. Aunque aún me considero un aprendiz en este vasto universo, disfruto enfrentando nuevos retos y aprendiendo constantemente. Cada nuevo lenguaje, framework o concepto que descubro me abre una puerta a posibilidades infinitas, y es algo que me motiva a seguir mejorando mis habilidades.
-            
-            Una de las cosas que más me gusta de la programación es su capacidad para convertir ideas en realidades tangibles. Desde pequeñas aplicaciones hasta sitios web completos, cada proyecto en el que trabajo es una oportunidad para crear algo único y funcional. Mi enfoque siempre ha sido escribir código limpio, eficiente y fácil de mantener, lo que me permite trabajar de manera efectiva y escalable.Además de la programación, soy un aficionado a la fotografía de naturaleza. Explorar el mundo a través del lente de una cámara es una de mis grandes pasiones. La fotografía me ha enseñado a observar los detalles, a tener paciencia y a apreciar la belleza de lo cotidiano. He tenido la suerte de viajar a varios países, lo que me ha permitido capturar paisajes impresionantes y momentos únicos en diferentes rincones del mundo.
-            
-            Mis viajes me han llevado a conocer culturas diversas y personas con formas de pensar y vivir muy diferentes a las mías. Este intercambio cultural me ha ayudado a ampliar mi visión del mundo y a entenderlo de una manera completamente distinta. Creo firmemente que viajar y explorar nuevas realidades nos convierte en personas más empáticas y conscientes, y esa perspectiva la aplico tanto en mi vida personal como en mi trabajo. Me considero una persona comprometida con mi crecimiento personal y profesional. Siempre busco aprender algo nuevo cada día, ya sea a través de la tecnología, la fotografía o mis experiencias de vida. Me esfuerzo por mejorar y por contribuir, de alguna manera, a crear un impacto positivo en los proyectos en los que participo y en las personas que me rodean.
-            
-            Si te gustaría ponerte en contacto conmigo para hablar sobre oportunidades de colaboración, intercambiar ideas o simplemente compartir una conversación interesante, no dudes en hacerlo. Estoy abierto a conectar con otros apasionados por la tecnología, la creatividad y el aprendizaje continuo.</p>
+            <a class="contactInfoLink" href="https://www.linkedin.com/in/n48dev/" target="_blank" rel="noreferrer">💼 &nbsp;in/n48dev</a>
 
-            <section id="contactInfo">
-                <img
-                title="Selfie de Anthony" 
-                alt="Una selfie de Anthony Buitrago" 
-                src="../assets/images/me/me.jpg">
-
-                <p id="contactInfoP"><a class="contactInfoLink" href="mailto:n48dev@gmail.com" target="_blank">📬 &nbsp;n48dev@gmail.com</a>
-                
-                <a class="contactInfoLink" href="https://www.linkedin.com/in/n48dev/" target="_blank" rel="noreferrer">💼 &nbsp;in/n48dev</a>
-
-                <a class="contactInfoLink" href="https://www.google.com/maps/place/Colombia/" target="_blank" rel="noreferrer">📍 &nbsp;Colombia</a></p>
-            </section>
-
-        </main>
-
-        <footer class="foot">
-
-            Copyright © 2024 - Anthony Buitrago
-            
-        </footer>
-
-    </body>
-
+            <a class="contactInfoLink" href="https://www.google.com/maps/place/Colombia/" target="_blank" rel="noreferrer">📍 &nbsp;Colombia</a></p>
+        </section>
+    </main>
+    <footer class="foot">
+        Copyright © 2024 - Anthony Buitrago
+    </footer>
+    <script src="../assets/scripts/main.js"></script>
+    <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
+</body>
 </html>

@@ -1,130 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Home | n48dev</title>
+    <meta name="description" content="My blog, my space, where I'll share posts about my personal and professional life!">
+
+    <meta property="og:title" content="Anthony's Blog">
+    <meta property="og:description" content="My blog, my space, where I'll share posts about my personal and professional life">
+    <meta property="og:image" content="../assets/images/me/me.jpg">
+    <meta property="og:image:alt" content="A selfie of Anthony Buitrago">
+
+    <link rel="canonical" href="https://n48dev.github.io/blog/en/index.html">
+    <link rel="alternate" hreflang="es" href="https://n48dev.github.io/blog/es/index.html">
+    <link rel="alternate" hreflang="de" href="https://n48dev.github.io/blog/de/index.html">
     
-    <head>
+    <meta name="theme-color" content="#222"> 
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="../assets/styles/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=settings" />
+</head>
+<body id="container">
+    <header class="headerBar">
+        <h1><a id="mainTitle" href="index.html">n48dev</a></h1>
 
-        <title>Home | n48dev</title>
-        <meta name="description" content="My blog, my space, where I'll share posts about my personal and professional life!">
+        <nav>
+            <a href="index.html" class="nav-active">Home</a>
+            <a href="articles.html">Articles</a>
+            <a href="aboutme.html">About me</a>
+        </nav>
 
-        <meta property="og:title" content="Anthony's Blog">
-        <meta property="og:description" content="My blog, my space, where I'll share posts about my personal and professional life">
-        <meta property="og:image" content="../assets/images/me/me.jpg">
-        <meta property="og:image:alt" content="A selfie of Anthony Buitrago">
+        <button id="configButton"><span class="material-symbols-outlined">settings</span></button>
+        <div id="configMenu">
+            <p>Appearance:</p>
+            <button id="themeAutomatic">Automatic theme</button>
+            <button id="themeLight">Light theme</button>
+            <button id="themeDark">Dark theme</button>
+            <p>Language:</p>
+            <a href="index.html" id="langEN">English</a>
+            <a href="../es/index.html" id="langES">Spanish</a>
+            <a href="../de/index.html" id="langDE">German</a>
+        </div>
+    </header>
+    <main class="content">
+        <section>
+            <h3>Recent articles 📝</h3>
 
-        <link rel="canonical" href="https://n48dev.github.io/blog/en/index.html">
-        <link rel="alternate" hreflang="es" href="https://n48dev.github.io/blog/es/index.html">
-        <link rel="alternate" hreflang="de" href="https://n48dev.github.io/blog/de/index.html">
+            <div class="mainArticles">
+                <a href="articles.html#ourCatsOurFamily"><article class="eachMainArticles">
+                    <h4>Our cats, our family</h4>
+                    <p>In our home, we are four members: my partner, me, and our two adorable cats, Token and Cash. For us, they are not just pets; they are a fundamental part of our lives, loyal companions who have taught us so much about love, responsibility, and happiness in small moments. If you've ever had the pleasure of sharing your life with a cat, you'll know exactly what we're talking about...</p>
+                </article></a>
+                <a href="articles.html#blogCreation"><article class="eachMainArticles">
+                    <h4>The creation of this blog</h4>
+                    <p>In today's world, having an online presence is not only a powerful tool for sharing knowledge, experiences, or anything else, but it is also an excellent way to put technical skills into practice and showcase them. With this dual purpose in mind, I decided to embark on creating my own blog. This project represents not only a personal space to express my thoughts and share my adventures...</p>
+                </article></a>
+                <a href="articles.html#europeTrip2024"><article class="eachMainArticles">
+                    <h4>Trip to Europe in 2024</h4>
+                    <p>In June 2024, I had the opportunity to take a trip that will undoubtedly remain in my memory. The adventure began in Zurich, Switzerland, a city that left me speechless with its perfect blend of modernity and nature. I spent four days there, enough time to enjoy some of its most iconic spots. One of the places that impressed me the most was Seleger Moor, a natural park full of beauty...</p>
+                </article></a>
+            </div>
+        </section>
+
+        <hr class="divider">
         
-        <meta name="theme-color" content="#222"> 
-        <link rel="icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
+        <section id="visitedCountries">
+            <h3>Visited Countries ✅</h3>
 
-        <link rel="stylesheet" type="text/css" href="../assets/styles/main.css">
-        <script src="../assets/scripts/main.js"></script>
+            <ol>
+                <p>Venezuela<br><span>🇻🇪</span></p>
+                <p>Colombia<br><span>🇨🇴</span></p>
+                <p>Ecuador<br><span>🇪🇨</span></p>
+                <p>Germany<br><span>🇩🇪</span></p>
+                <p>Switzerland<br><span>🇨🇭</span></p>
+                <p>Netherlands<br><span>🇳🇱</span></p>
+                <p>Spain<br><span>🇪🇸</span></p>
+                <p>Croatia<br><span>🇭🇷</span></p>
+                <p>Cuba<br><span>🇨🇺</span></p>
+                <p>Italy<br><span>🇮🇹</span></p>
+                <p>Czech Republic<br><span>🇨🇿</span></p>
+            </ol>
+        </section>
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=settings" />
-        <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
+        <hr class="divider">
 
-    </head>
-
-    <body id="container">
-
-        <header class="headerBar">
-            <h1><a id="mainTitle" href="index.html">n48dev</a></h1>
-
-            <nav>
-                <a href="index.html" class="nav-active">Home</a>
-                <a href="articles.html">Articles</a>
-                <a href="aboutme.html">About me</a>
-            </nav>
-
-            <button id="configButton"><span class="material-symbols-outlined">settings</span></button>
-            <div id="configMenu">
-                <p>Appearance:</p>
-                <button id="themeAutomatic">Automatic theme</button>
-                <button id="themeLight">Light theme</button>
-                <button id="themeDark">Dark theme</button>
-                <p>Language:</p>
-                <a href="index.html" id="langEN">English</a>
-                <a href="../es/index.html" id="langES">Spanish</a>
-                <a href="../de/index.html" id="langDE">German</a>
-        </header>
-
-        <main class="content">
-
-            <section>
-                <h3>Recent articles 📝</h3>
-
-                <div class="mainArticles">
-                    <a href="articles.html#ourCatsOurFamily"><article class="eachMainArticles">
-                        <h4>Our cats, our family</h4>
-                        <p>In our home, we are four members: my partner, me, and our two adorable cats, Token and Cash. For us, they are not just pets; they are a fundamental part of our lives, loyal companions who have taught us so much about love, responsibility, and happiness in small moments. If you've ever had the pleasure of sharing your life with a cat, you'll know exactly what we're talking about...</p>
-                    </article></a>
-                    <a href="articles.html#blogCreation"><article class="eachMainArticles">
-                        <h4>The creation of this blog</h4>
-                        <p>In today's world, having an online presence is not only a powerful tool for sharing knowledge, experiences, or anything else, but it is also an excellent way to put technical skills into practice and showcase them. With this dual purpose in mind, I decided to embark on creating my own blog. This project represents not only a personal space to express my thoughts and share my adventures...</p>
-                    </article></a>
-                    <a href="articles.html#europeTrip2024"><article class="eachMainArticles">
-                        <h4>Trip to Europe in 2024</h4>
-                        <p>In June 2024, I had the opportunity to take a trip that will undoubtedly remain in my memory. The adventure began in Zurich, Switzerland, a city that left me speechless with its perfect blend of modernity and nature. I spent four days there, enough time to enjoy some of its most iconic spots. One of the places that impressed me the most was Seleger Moor, a natural park full of beauty...</p>
-                    </article></a>
-                </div>
-            </section>
-
-            <hr class="divider">
-            
-            <section id="visitedCountries">
-                <h3>Visited Countries ✅</h2>
-
-                <ol>
-                    <p>Venezuela<br><span>🇻🇪</span></p>
-                    <p>Colombia<br><span>🇨🇴</span></p>
-                    <p>Ecuador<br><span>🇪🇨</span></p>
-                    <p>Germany<br><span>🇩🇪</span></p>
-                    <p>Switzerland<br><span>🇨🇭</span></p>
-                    <p>Netherlands<br><span>🇳🇱</span></p>
-                    <p>Spain<br><span>🇪🇸</span></p>
-                    <p>Croatia<br><span>🇭🇷</span></p>
-                    <p>Cuba<br><span>🇨🇺</span></p>
-                    <p>Italy<br><span>🇮🇹</span></p>
-                    <p>Czech Republic<br><span>🇨🇿</span></p>
-                </ol>
-            </section>
-
-            <hr class="divider">
-
-            <section>
-                <h3>Park Seleger Moor 🇨🇭</h1>
-                <div class="homeImages">
-                    <a href="../assets/images/parkselegermoor2024/img-93.jpg" target="_blank">
-                    <img src="../assets/images/parkselegermoor2024/img-93.jpg"></a>
-                    <a href="../assets/images/parkselegermoor2024/img-94.jpg" target="_blank">
-                    <img src="../assets/images/parkselegermoor2024/img-94.jpg"></a>
-                    <a href="../assets/images/parkselegermoor2024/img-95.jpg" target="_blank">
-                    <img src="../assets/images/parkselegermoor2024/img-95.jpg"></a>
-                    <a href="../assets/images/parkselegermoor2024/img-92.jpg" target="_blank">
-                    <img src="../assets/images/parkselegermoor2024/img-92.jpg"></a>
-                    <a href="../assets/images/parkselegermoor2024/img-98.jpg" target="_blank">
-                    <img src="../assets/images/parkselegermoor2024/img-98.jpg"></a>
-                    <a href="../assets/images/parkselegermoor2024/img-97.jpg" target="_blank">
-                    <img src="../assets/images/parkselegermoor2024/img-97.jpg"></a>
-                    <a href="../assets/images/parkselegermoor2024/img-96.jpg" target="_blank">
-                    <img src="../assets/images/parkselegermoor2024/img-96.jpg"></a>
-                    <a href="../assets/images/parkselegermoor2024/img-99.jpg" target="_blank">
-                    <img src="../assets/images/parkselegermoor2024/img-99.jpg"></a>
-                </div>
-            </section>
-            
-        </main>
-
-        <footer class="foot">
-
-            Copyright © 2024 - Anthony Buitrago
-            
-        </footer>
-
-    </body>
-
+        <section>
+            <h3>Park Seleger Moor 🇨🇭</h1>
+            <div class="homeImages">
+                <a href="../assets/images/parkselegermoor2024/img-93.jpg" target="_blank">
+                <img src="../assets/images/parkselegermoor2024/img-93.jpg"></a>
+                <a href="../assets/images/parkselegermoor2024/img-94.jpg" target="_blank">
+                <img src="../assets/images/parkselegermoor2024/img-94.jpg"></a>
+                <a href="../assets/images/parkselegermoor2024/img-95.jpg" target="_blank">
+                <img src="../assets/images/parkselegermoor2024/img-95.jpg"></a>
+                <a href="../assets/images/parkselegermoor2024/img-92.jpg" target="_blank">
+                <img src="../assets/images/parkselegermoor2024/img-92.jpg"></a>
+                <a href="../assets/images/parkselegermoor2024/img-98.jpg" target="_blank">
+                <img src="../assets/images/parkselegermoor2024/img-98.jpg"></a>
+                <a href="../assets/images/parkselegermoor2024/img-97.jpg" target="_blank">
+                <img src="../assets/images/parkselegermoor2024/img-97.jpg"></a>
+                <a href="../assets/images/parkselegermoor2024/img-96.jpg" target="_blank">
+                <img src="../assets/images/parkselegermoor2024/img-96.jpg"></a>
+                <a href="../assets/images/parkselegermoor2024/img-99.jpg" target="_blank">
+                <img src="../assets/images/parkselegermoor2024/img-99.jpg"></a>
+            </div>
+        </section>
+    </main>
+    <footer class="foot">
+        Copyright © 2024 - Anthony Buitrago
+    </footer>
+    <script src="../assets/scripts/main.js"></script>
+    <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
+</body>
 </html>
