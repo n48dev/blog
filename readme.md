@@ -4,11 +4,12 @@ This is my personal blog where I will share aspects of my life, both personal an
 
 ## Main features
 
-- Posts about my personal and professional life.
-- Articles about travels, technology, and other topics of interest.
-- Some of the photographs I've taken.
-- Simple and easy-to-understand structure, with a focus on progressively implementing improvements.
-- Responsive design, adapted to different screen sizes and devices.
+- 📝 **Blog posts**: Insights into my personal and professional life.
+- ✈️ **Travel and technology articles**: Covering various topics of interest.
+- 📸 **Photography**: Showcases some of the photographs I've taken.
+- 🎨 **Responsive design**: Adapted to different screen sizes and devices.
+- 🌗 **Light/dark mode toggle**: Supports light and dark mode for a personalized user experience.
+- 🌍 **Multilingual support**: Available in **English**, **Spanish**, and **German**.
 
 ## Technologies used
 
@@ -16,16 +17,38 @@ This blog is built using the following technologies:
 
 - **HTML5**: For the structure of the page.
 - **CSS3**: For design and style, including adaptability to different devices through responsive design techniques.
-- **JavaScript**: For polyfills and functionalities that will be added in future implementations.
+- **JavaScript**: For polyfills and functionalities.
 
 ## Project structure
 
-- `/assets`: Contains images and other static resources such as fonts and icons.
-- `/styles`: Stylesheets files.
-- `/scripts`: JavaScript files or other scripts for interactive functionalities.
-- `/index.html`: Main page of the blog.
-- `/article.html`: Page where blog posts will be listed.
-- `/aboutme.html`: Page with my personal information and contact details, as well as a brief description of who I am.
+```
+assets/
+  ├─ images/
+  │   ├─ me/
+  │   ├─ favicon/
+  │   ├─ ParkSelegerMoor/
+  │   └─ COPYRIGHT_IMAGES.md
+  ├─ styles/
+  │   └─ main.css
+  └─ scripts/
+      └─ main.js
+en/
+  ├─ index.html
+  ├─ articles.html
+  └─ aboutme.html
+es/
+  ├─ index.html
+  ├─ articles.html
+  └─ aboutme.html
+de/
+  ├─ index.html
+  ├─ articles.html
+  └─ aboutme.html
+.gitignore
+LICENSE.md
+README.md
+index.html
+```
 
 ## Installation and usage
 
@@ -37,7 +60,7 @@ If you want to clone this blog and run it locally on your machine, follow these 
 git clone https://github.com/n48dev/blog.git
 ```
 
-2. Start a simple local server. You can use the "Live Server" extension in VS Code or `http-server`:
+2. Start a simple local server. Use either the "Live Server" extension in VS Code or `http-server` to start a local server.
 
 - **With VS Code's "Live Server"**:
 
@@ -59,21 +82,22 @@ http-server -p 8000
 
 3. Open the local server in your browser by going to:
 
-`localhost:8000/`
+`localhost:8000/en/index.html`
 
-## License
+## Licenses
 
-This project is under the **All Rights Reserved** license. This means that all content, including photos, code, and any other resources, is copyrighted. Copying, distributing, or using these elements without my explicit permission is not allowed.
-
-Copyright © 2024 - Anthony Buitrago. All rights reserved.
+- The **code** and **written content** in this repository are licensed under the **GNU General Public License v3.0 (GPL-3.0)**. **This does not include photos.**
+- All **photos** located in the `assets/images/` directory (including its subdirectories) are protected by copyright and are not included under the GPL-3.0 license.
+  - **Copyright © 2024 - Anthony Buitrago. All rights reserved.**
+  - These photos are not covered by the GPL-3.0 license. See the `assets/images/COPYRIGHT_IMAGES.md` file for more details.
 
 ## Contact
 
 If you have any questions, suggestions, or just want to get in touch with me, you can do so through:
 
 - **Email**: n48dev@gmail.com
-- **LinkedIn**: https://www.linkedin.com/in/n48dev/
+- **LinkedIn**: [in/n48dev](https://www.linkedin.com/in/n48dev/)
 
 ## Acknowledgements
 
-Thanks to everyone who has supported and motivated me to keep learning and discovering, and to the open-source technologies that have helped me develop this blog.
+Thanks to everyone who has supported and motivated me to keep learning and exploring. Special thanks to the open-source community for providing the tools and resources to build this blog.
