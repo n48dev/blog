@@ -19,270 +19,73 @@ function configMenu() {
     });
 
     /* Handle light/dark/automatic theme */
-    const themeAutomatic = document.getElementById('themeAutomatic');
     const themeLight = document.getElementById('themeLight');
     const themeDark = document.getElementById('themeDark');
+    const themeAutomatic = document.getElementById('themeAutomatic');
     
-    const container = document.getElementById('container');
-    const mainTitle = document.getElementById('mainTitle');
-    const divider = document.querySelectorAll('.divider');
-    const eachMainArticles = document.querySelectorAll('.eachMainArticles');
-    const blogArticles = document.querySelectorAll('.blogArticles');
-    const contactInfoP = document.getElementById('contactInfoP');
-    const contactInfoLink = document.querySelectorAll('.contactInfoLink');
+    function setCSSVariable(variableName, newValue) {
+        document.documentElement.style.setProperty(variableName, newValue);
+    }
+ 
+    function setLightTheme() {
+        setCSSVariable('--background-color--main', '#f0f0f0');
+        setCSSVariable('--background-color-primary', '#222');
+        setCSSVariable('--background-color-secondary', '#f7f7f7');
+        setCSSVariable('--font-color-primary', '#222');
+        setCSSVariable('--font-color-secondary', '#eee');
+    }
 
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-        container.classList.remove('dark-mode');
-        mainTitle.classList.remove('dark-mode');
-        configButton.classList.remove('dark-mode');
-        if (divider) {
-            toggleDividerDarkMode(false);
-        }
-        if (eachMainArticles) {
-            toggleEachMainArticlesDarkMode(false);
-        }
-        if (blogArticles) {
-            toggleBlogArticlesDarkMode(false);
-        }
-        if (contactInfoP) {
-            contactInfoP.classList.remove('dark-mode');
-        }
-        if (contactInfoLink) {
-            toggleContactInfoLinkDarkMode(false);
-        }
-    } else if (savedTheme === 'dark') {
-        container.classList.add('dark-mode');
-        mainTitle.classList.add('dark-mode');
-        configButton.classList.add('dark-mode');
-        if (divider) {
-            toggleDividerDarkMode(true);
-        }
-        if (eachMainArticles) {
-            toggleEachMainArticlesDarkMode(true);
-        }
-        if (blogArticles) {
-            toggleBlogArticlesDarkMode(true);
-        }
-        if (contactInfoP) {
-            contactInfoP.classList.add('dark-mode');
-        }
-        if (contactInfoLink) {
-            toggleContactInfoLinkDarkMode(true);
-        }
-    } else {
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            container.classList.add('dark-mode');
-            mainTitle.classList.add('dark-mode');
-            configButton.classList.add('dark-mode');
-            if (divider) {
-                toggleDividerDarkMode(true);
-            }
-            if (eachMainArticles) {
-                toggleEachMainArticlesDarkMode(true);
-            }
-            if (blogArticles) {
-                toggleBlogArticlesDarkMode(true);
-            }
-            if (contactInfoP) {
-                contactInfoP.classList.add('dark-mode');
-            }
-            if (contactInfoLink) {
-                toggleContactInfoLinkDarkMode(true);
-            }
-        } else {
-            container.classList.remove('dark-mode');
-            mainTitle.classList.remove('dark-mode');
-            configButton.classList.remove('dark-mode');
-            if (divider) {
-                toggleDividerDarkMode(false);
-            }
-            if (eachMainArticles) {
-                toggleEachMainArticlesDarkMode(false);
-            }
-            if (blogArticles) {
-                toggleBlogArticlesDarkMode(false);
-            }
-            if (contactInfoP) {
-                contactInfoP.classList.remove('dark-mode');
-            }
-            if (contactInfoLink) {
-                toggleContactInfoLinkDarkMode(false);
-            }
-        }
-    };
+    function setDarkTheme() {
+        setCSSVariable('--background-color--main', '#2e2e2e');
+        setCSSVariable('--background-color-primary', '#f7f7f7');
+        setCSSVariable('--background-color-secondary', '#222');
+        setCSSVariable('--font-color-primary', '#eee');
+        setCSSVariable('--font-color-secondary', '#222');
+    }
+
+    themeLight.addEventListener('click', () => {
+        setLightTheme();
+        localStorage.setItem('theme', 'light');
+    });
+
+    themeDark.addEventListener('click', () => {
+        setDarkTheme();
+        localStorage.setItem('theme', 'dark');
+    });
     
     themeAutomatic.addEventListener('click', () => {
         if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            container.classList.add('dark-mode');
-            mainTitle.classList.add('dark-mode');
-            configButton.classList.add('dark-mode');
-            if (divider) {
-                toggleDividerDarkMode(true);
-            }
-            if (eachMainArticles) {
-                toggleEachMainArticlesDarkMode(true);
-            }
-            if (blogArticles) {
-                toggleBlogArticlesDarkMode(true);
-            }
-            if (contactInfoP) {
-                contactInfoP.classList.add('dark-mode');
-            }
-            if (contactInfoLink) {
-                toggleContactInfoLinkDarkMode(true);
-            }
+            setDarkTheme();
         } else {
-            container.classList.remove('dark-mode');
-            mainTitle.classList.remove('dark-mode');
-            configButton.classList.remove('dark-mode');
-            if (divider) {
-                toggleDividerDarkMode(false);
-            }
-            if (eachMainArticles) {
-                toggleEachMainArticlesDarkMode(false);
-            }
-            if (blogArticles) {
-                toggleBlogArticlesDarkMode(false);
-            }
-            if (contactInfoP) {
-                contactInfoP.classList.remove('dark-mode');
-            }
-            if (contactInfoLink) {
-                toggleContactInfoLinkDarkMode(false);
-            }
+            setLightTheme();
         }
         localStorage.removeItem('theme');
     });
-    themeLight.addEventListener('click', () => {
-        container.classList.remove('dark-mode');
-        mainTitle.classList.remove('dark-mode');
-        configButton.classList.remove('dark-mode');
-        if (divider) {
-            toggleDividerDarkMode(false);
-        }
-        if (eachMainArticles) {
-            toggleEachMainArticlesDarkMode(false);
-        }
-        if (blogArticles) {
-            toggleBlogArticlesDarkMode(false);
-        }
-        if (contactInfoP) {
-            contactInfoP.classList.remove('dark-mode');
-        }
-        if (contactInfoLink) {
-            toggleContactInfoLinkDarkMode(false);
-        }
-        localStorage.setItem('theme', 'light');
-    });
-    themeDark.addEventListener('click', () => {
-        container.classList.add('dark-mode');
-        mainTitle.classList.add('dark-mode');
-        configButton.classList.add('dark-mode');
-        if (divider) {
-            toggleDividerDarkMode(true);
-        }
-        if (eachMainArticles) {
-            toggleEachMainArticlesDarkMode(true);
-        }
-        if (blogArticles) {
-            toggleBlogArticlesDarkMode(true);
-        }
-        if (contactInfoP) {
-            contactInfoP.classList.add('dark-mode');
-        }
-        if (contactInfoLink) {
-            toggleContactInfoLinkDarkMode(true);
-        }
-        localStorage.setItem('theme', 'dark');
-    });
-
-    /* Get automatic theme */
+    
     const mediaQueryTheme = window.matchMedia("(prefers-color-scheme: dark)");
     mediaQueryTheme.addEventListener('change', () => {
         if (!localStorage.getItem('theme')) {
             if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-                container.classList.add('dark-mode');
-                mainTitle.classList.add('dark-mode');
-                configButton.classList.add('dark-mode');
-                if (divider) {
-                    toggleDividerDarkMode(true);
-                }
-                if (eachMainArticles) {
-                    toggleEachMainArticlesDarkMode(true);
-                }
-                if (blogArticles) {
-                    toggleBlogArticlesDarkMode(true);
-                }
-                if (contactInfoP) {
-                    contactInfoP.classList.add('dark-mode');
-                }
-                if (contactInfoLink) {
-                    toggleContactInfoLinkDarkMode(true);
-                }
+                setDarkTheme();
             } else {
-                container.classList.remove('dark-mode');
-                mainTitle.classList.remove('dark-mode');
-                configButton.classList.remove('dark-mode');
-                if (divider) {
-                    toggleDividerDarkMode(false);
-                }
-                if (eachMainArticles) {
-                    toggleEachMainArticlesDarkMode(false);
-                }
-                if (blogArticles) {
-                    toggleBlogArticlesDarkMode(false);
-                }
-                if (contactInfoP) {
-                    contactInfoP.classList.remove('dark-mode');
-                }
-                if (contactInfoLink) {
-                    toggleContactInfoLinkDarkMode(false);
-                }
+                setLightTheme();
             }
-        };
-    });
+        }
+    })
 
-    function toggleDividerDarkMode(add) {
-        divider.forEach(divider => {
-            if (add) {
-                divider.classList.add('dark-mode');
-            } else {
-                divider.classList.remove('dark-mode');
-            }
-        });
-    };
-
-    function toggleEachMainArticlesDarkMode(add) {
-        eachMainArticles.forEach(eachMainArticles => {
-            if (add) {
-                eachMainArticles.classList.add('dark-mode');
-            } else {
-                eachMainArticles.classList.remove('dark-mode');
-            }
-        });
-    };
-
-    function toggleBlogArticlesDarkMode(add) {
-        blogArticles.forEach(blogArticles => {
-            if (add) {
-                blogArticles.classList.add('dark-mode');
-            } else {
-                blogArticles.classList.remove('dark-mode');
-            }
-        });
-    };
-
-    function toggleContactInfoLinkDarkMode(add) {
-        contactInfoLink.forEach(contactInfoLink => {
-            if (add) {
-                contactInfoLink.classList.add('dark-mode');
-            } else {
-                contactInfoLink.classList.remove('dark-mode');
-            }
-        });
-    };
-
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        setLightTheme();
+    } else if (savedTheme === 'dark') {
+        setDarkTheme();
+    } else {
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            setDarkTheme();
+        } else {
+            setLightTheme();
+        }
+    }
+    
     /* Language settings  */
     const langEN = document.getElementById('langEN');
     const langES = document.getElementById('langES');
@@ -295,13 +98,13 @@ function configMenu() {
 
     langEN.addEventListener('click', () => {
         localStorage.setItem('lang', 'en');
-    })
+    });
     langES.addEventListener('click', () => {
         localStorage.setItem('lang', 'es');
-    })
+    });
     langDE.addEventListener('click', () => {
         localStorage.setItem('lang', 'de');
-    })
+    });
     
     if (savedLang === 'en') {
         if (currentPage === "index.html" && !completeCurrentPage.includes('en')) {

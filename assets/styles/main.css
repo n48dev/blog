@@ -3,6 +3,18 @@ Copyright © 2024 - Anthony Buitrago
 
 This blog is licensed under the GNU General Public License v3.0.
 See the LICENSE file in the root of this project for details. */
+:root {
+    --background-color--main: #f0f0f0;
+    --background-color-primary: #222;
+    --background-color-secondary: #f7f7f7;
+    --background-color-tertiary: #ffd500;
+    --font-color-primary: #222;
+    --font-color-secondary: #eee;
+    --font-color-tertiary: #ffd500;
+    --link-color-primary: #0051ff;
+    --shadow-color-primary: #00000077;
+}
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 1,
@@ -22,29 +34,19 @@ See the LICENSE file in the root of this project for details. */
     "header header header"
     "main main main"
     "footer footer footer";
-    background-color: #f0f0f0;
-    color: black;
+    background-color: var(--background-color--main);
+    color: var(--font-color-primary);
     animation: font-size 500ms;
-    transition: background-color 200ms, color 200ms;
-}
-
-#container.dark-mode {
-    background-color: #2e2e2e;
-    color: white
 }
 
 .divider {
-    border: 1px solid black;
+    border: 1px solid var(--background-color-primary);
     width: 75%;
     max-width: 1500px;
     margin: 56px 68px 0;
     padding: 0;
     justify-self: center;
     transition: border 200ms;
-}
-
-.divider.dark-mode {
-    border: 1px solid white
 }
 
 .headerBar {
@@ -58,7 +60,7 @@ See the LICENSE file in the root of this project for details. */
     top: 0;
     width: 100%;
     height: min-content;
-    box-shadow: 0 0 10px #000;
+    box-shadow: 0 0 10px var(--shadow-color-primary);
     white-space: nowrap;
     margin: 0;
     z-index: 1;
@@ -74,13 +76,11 @@ See the LICENSE file in the root of this project for details. */
 
 #mainTitle {
     text-decoration: none;
-    color: #f0f0f0;
-    transition: color 200ms;
+    color: #eee;
 }
 
-#mainTitle.dark-mode,
 #mainTitle:hover {
-    color: #ffd500;
+    color: var(--font-color-tertiary);
 }
 
 .headerBar nav {
@@ -98,8 +98,7 @@ See the LICENSE file in the root of this project for details. */
 .headerBar nav a {
     position: relative;
     text-decoration: none;
-    color: #f0f0f0;
-    transition: color 200ms;
+    color: #eee;
 }
 
 .headerBar nav a::after {
@@ -109,13 +108,13 @@ See the LICENSE file in the root of this project for details. */
     right: 0;
     bottom: -3px;
     height: 2px;
-    background-color: #ffd500;
+    background-color: var(--font-color-tertiary);
     transform: scaleX(0);
     transition: transform 200ms ease;
 }
 
 .headerBar nav a:hover {
-    color: #ffd500;
+    color: var(--font-color-tertiary);
 }
 
 .headerBar nav a:hover::after {
@@ -123,7 +122,7 @@ See the LICENSE file in the root of this project for details. */
 }
 
 .headerBar nav a.nav-active {
-    color: #ffd500;
+    color: var(--font-color-tertiary);
 }
 
 .headerBar nav a.nav-active::after {
@@ -141,14 +140,13 @@ See the LICENSE file in the root of this project for details. */
     border: none;
     border-radius: 50%;
     background-color: transparent;
-    color: #f0f0f0;
-    transition: transform 50ms, color 200ms;
+    color: #eee;
+    transition: transform 50ms;
     cursor: pointer;
 }
 
-#configButton.dark-mode,
 #configButton:hover {
-    color: #ffd500;
+    color: var(--font-color-tertiary);
 }
 
 #configButton:active {
@@ -160,14 +158,13 @@ See the LICENSE file in the root of this project for details. */
     flex-direction: column;
     top: 50px;
     right: 20px;
-    background-color: #333;
     border-radius: 4px;
     position: absolute;
     visibility: hidden;
     top: 58px;
     right: 34px;
-    color: white;
-    box-shadow: 2px 2px 8px #00000077;
+    color: #eee;
+    box-shadow: 2px 2px 8px var(--shadow-color-primary);
     overflow: hidden;
     opacity: 0;
     transition: opacity 100ms ease;
@@ -190,7 +187,7 @@ See the LICENSE file in the root of this project for details. */
 #configMenu button {
     border: none;
     background-color: #222;
-    color: white;
+    color: #eee;
     font-size: 0.7rem;
     width: 120px;
     height: 20px;
@@ -200,7 +197,7 @@ See the LICENSE file in the root of this project for details. */
 }
 
 #configMenu button:nth-child(odd) {
-    background-color: #292929;
+    background-color: #333;
 }
 
 #configMenu button:hover {
@@ -211,7 +208,7 @@ See the LICENSE file in the root of this project for details. */
 
 #configMenu a {
     background-color: #222;
-    color: white;
+    color: #eee;
     font-size: 0.7rem;
     height: 20px;
     transition: background-color 200ms, color 200ms;
@@ -223,11 +220,11 @@ See the LICENSE file in the root of this project for details. */
 }
 
 #configMenu a:nth-child(odd) {
-    background-color: #292929;
+    background-color: #333;
 }
 
 #configMenu a:hover {
-    background-color: #ffd500;
+    background-color: var(--background-color-tertiary);
     color: #222;
 }
 
@@ -265,21 +262,16 @@ See the LICENSE file in the root of this project for details. */
 
 .mainArticles a {
     text-decoration: none;
-    color: black;
+    color: var(--font-color-primary);
 }
 
 .eachMainArticles {
     border: 2px;
     border-radius: 16px;
-    box-shadow: 0 0 2px black;
-    background-color: #f7f7f7;
+    box-shadow: 0 0 2px var(--shadow-color-primary);
+    background-color: var(--background-color-secondary);
     padding: 1px 24px 6px;
-    transition: transform 200ms ease-in-out, background-color 200ms;
-}
-
-.eachMainArticles.dark-mode {
-    background-color: #222;
-    color: white;
+    transition: transform 200ms ease-in-out;
 }
 
 .eachMainArticles:hover {
@@ -332,7 +324,7 @@ See the LICENSE file in the root of this project for details. */
     animation: revealOST linear both;
     animation-timeline: view();
     animation-range: entry 25% cover 30%;
-    box-shadow: 0 0 2px black;
+    box-shadow: 0 0 2px var(--shadow-color-primary);
 }
 
 /* Articles */
@@ -349,18 +341,13 @@ See the LICENSE file in the root of this project for details. */
 .blogArticles {
     border: 2px;
     border-radius: 16px;
-    box-shadow: 0 0 2px black;
-    background-color: #f7f7f7;
+    box-shadow: 0 0 2px var(--shadow-color-primary);
+    background-color: var(--background-color-secondary);
     padding: 24px;
     margin: 0 48px 0;
     animation: revealT ease-in both;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
-    transition: background-color 200ms;
-}
-
-.blogArticles.dark-mode {
-    background-color: #222;
 }
 
 .blogArticles header h3 {
@@ -395,7 +382,6 @@ See the LICENSE file in the root of this project for details. */
 .contentAboutMe p {
     grid-area: mainParagraf;
     margin: 48px 16px 64px 64px;
-    transition: margin 500ms;
     white-space: pre-line;
 }
 
@@ -413,7 +399,7 @@ See the LICENSE file in the root of this project for details. */
     height: auto;
     margin: 0 auto 0;
     border-radius: 16px;
-    box-shadow: 0 0 2px #000;
+    box-shadow: 0 0 2px var(--shadow-color-primary);
     transition: transform 100ms ease-in-out, margin 500ms;
 }
 
@@ -433,13 +419,9 @@ See the LICENSE file in the root of this project for details. */
     border-radius: 16px;
     padding: 24px 16px 24px 34px;
     box-sizing: border-box;
-    background-color: #f7f7f7;
+    background-color: var(--background-color-secondary);
     box-shadow: 0 0 2px #000;
-    transition: transform 100ms ease-in-out, backgroud-color 200ms;
-}
-
-#contactInfoP.dark-mode {
-    background-color: #222;
+    transition: transform 100ms ease-in-out;
 }
 
 #contactInfoP:hover {
@@ -450,16 +432,12 @@ See the LICENSE file in the root of this project for details. */
 .contactInfoLink {
     white-space: nowrap;
     text-decoration: none;
-    color: black;
-    transition: color 200ms;
-}
-
-.contactInfoLink.dark-mode {
-    color:white
+    color: var(--font-color-primary);
+    transition: color 50ms;
 }
 
 .contactInfoLink:hover {
-    color: #0051ff;
+    color: var(--link-color-primary);
 }
 
 /* Footer */
@@ -471,10 +449,10 @@ See the LICENSE file in the root of this project for details. */
     align-content: center;
     height: 70px;
     background: #222;
-    color: white;
+    color: #eee;
     transition: font-size 500ms;
     margin: 0;
-    box-shadow: 0 0px 10px #000;
+    box-shadow: 0 0px 10px var(--shadow-color-primary);
 }
 
 /* Tablets */
