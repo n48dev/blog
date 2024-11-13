@@ -271,12 +271,12 @@ See the LICENSE file in the root of this project for details. */
     box-shadow: 0 0 2px var(--shadow-color-primary);
     background-color: var(--background-color-secondary);
     padding: 1px 24px 6px;
-    transition: transform 200ms ease-in-out;
+    transition: transform 100ms ease-in-out;
 }
 
 .eachMainArticles:hover {
     transform: scale(1.03);
-    transition: transform 100ms ease-in-out;
+    transition: transform 200ms ease-in-out;
 }
 
 .eachMainArticles h4 {
@@ -340,7 +340,7 @@ See the LICENSE file in the root of this project for details. */
 
 .blogArticles {
     border: 2px;
-    border-radius: 16px;
+    border-radius: 4px;
     box-shadow: 0 0 2px var(--shadow-color-primary);
     background-color: var(--background-color-secondary);
     padding: 24px;
@@ -364,6 +364,31 @@ See the LICENSE file in the root of this project for details. */
     white-space: pre-line;
     margin: 0;
     padding: 0;
+}
+
+.float-img-r {
+    float: right;
+    margin: 0.2rem 0 0.5rem 1rem;
+}
+
+.float-img-l {
+    float: left;
+    margin: 0.2rem 1rem 0.5rem 0;
+}
+
+.float-img-r,
+.float-img-l {
+    width: 40%;
+    min-width: 400px;
+    max-width: 620px;
+    border-radius: 3px;
+    transition: transform 100ms ease-in-out;
+}
+
+.float-img-r:hover,
+.float-img-l:hover {
+    transform: scale(1.01);
+    transition: transform 200ms ease-in-out;
 }
 
 /* Aboutme */
@@ -497,6 +522,15 @@ See the LICENSE file in the root of this project for details. */
 
     .blogArticles {
         margin: 0 24px 0;
+    }
+
+    .float-img-r,
+    .float-img-l {
+        float: none;
+        display: block;
+        width: 100%;
+        min-width: 0px;
+        margin: 0.2rem auto 1rem;
     }
 
     .contentAboutMe {
