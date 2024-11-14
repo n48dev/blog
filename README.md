@@ -109,7 +109,7 @@ http-server -p 8000
 
 3. Open the local server in your browser by going to:
 
-`localhost:8000/en/index.html`
+`localhost:8000/`
 
 ## Licenses
 
@@ -122,7 +122,7 @@ http-server -p 8000
 
 If you have any questions, suggestions, or just want to get in touch with me, you can do so through:
 
-- **Email**: n48dev@gmail.com
+- **Email**: contact@n48.dev
 - **LinkedIn**: [in/n48dev](https://www.linkedin.com/in/n48dev/)
 
 ## Acknowledgements

@@ -108,27 +108,27 @@ function configMenu() {
     
     if (savedLang === 'en') {
         if (currentPage === "index.html" && !completeCurrentPage.includes('en')) {
-            window.location.href = `/blog/en/index.html`;
+            window.location.href = `/en/index.html`;
         } else if (currentPage === "articles.html" && !completeCurrentPage.includes('en')) {
-            window.location.href = `/blog/en/articles.html`;
+            window.location.href = `/en/articles.html`;
         } else if (currentPage === "aboutme.html" && !completeCurrentPage.includes('en')) {
-            window.location.href = `/blog/en/aboutme.html`;
+            window.location.href = `/en/aboutme.html`;
         }
     } else if (savedLang === 'es') {
         if (currentPage === "index.html" && !completeCurrentPage.includes('es')) {
-            window.location.href = `/blog/es/index.html`;
+            window.location.href = `/es/index.html`;
         } else if (currentPage === "articles.html" && !completeCurrentPage.includes('es')) {
-            window.location.href = `/blog/es/articles.html`;
+            window.location.href = `/es/articles.html`;
         } else if (currentPage === "aboutme.html" && !completeCurrentPage.includes('es')) {
-            window.location.href = `/blog/es/aboutme.html`;
+            window.location.href = `/es/aboutme.html`;
         }
     } else if (savedLang === 'de') {
         if (currentPage === "index.html" && !completeCurrentPage.includes('de')) {
-            window.location.href = `/blog/de/index.html`;
+            window.location.href = `/de/index.html`;
         } else if (currentPage === "articles.html" && !completeCurrentPage.includes('de')) {
-            window.location.href = `/blog/de/articles.html`;
+            window.location.href = `/de/articles.html`;
         } else if (currentPage === "aboutme.html" && !completeCurrentPage.includes('de')) {
-            window.location.href = `/blog/de/aboutme.html`;
+            window.location.href = `/de/aboutme.html`;
         }
     } else {
         let langDirectory;
@@ -144,11 +144,11 @@ function configMenu() {
         }
 
         if (currentPage === "index.html") {
-            window.location.href = `/blog${langDirectory}index.html`;
+            window.location.href = `${langDirectory}index.html`;
         } else if (currentPage === "articles.html") {
-            window.location.href = `/blog${langDirectory}articles.html`;
+            window.location.href = `${langDirectory}articles.html`;
         } else if (currentPage === "aboutme.html") {
-            window.location.href = `/blog${langDirectory}aboutme.html`;
+            window.location.href = `${langDirectory}aboutme.html`;
         }
     }
 };
