@@ -70,7 +70,7 @@ See the LICENSE file in the root of this project for details. */
     grid-area: title;
     margin: 0 32px 0 32px;
     align-self: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     transition: font-size 500ms;
 }
 
@@ -442,7 +442,7 @@ See the LICENSE file in the root of this project for details. */
     margin: 1rem auto 0;
     border: 2px;
     border-radius: 16px;
-    padding: 24px 16px 24px 34px;
+    padding: 24px 16px 24px 44px;
     box-sizing: border-box;
     background-color: var(--background-color-secondary);
     box-shadow: 0 0 2px #000;
@@ -544,23 +544,28 @@ See the LICENSE file in the root of this project for details. */
         align-self: start;
     }
     
-    .contentAboutMe #contactInfo {
+    #contactInfo {
         flex-direction: row-reverse;
         justify-content: space-between;
         margin: 16px 24px 0;
     }
+    
+    #contactInfo img {
+        margin: 0;
+        width: 188px;
+    }
 
-    .contentAboutMe #contactInfo p {
-        height: 158px;
+    #contactInfo p {
+        height: 186px;
+        width: 225px;
         margin: 0;
         padding-left: 39px;
         text-align: left;
         font-size: .9rem;
     }
 
-    .contentAboutMe #contactInfo img {
-        margin: 0;
-        width: 160px;
+    #contactInfoP {
+        gap: 24px;
     }
 
     .foot {
@@ -625,18 +630,19 @@ See the LICENSE file in the root of this project for details. */
         margin: 0 12px 0;
     }
 
-    .contentAboutMe #contactInfo {
+    #contactInfo {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
-    .contentAboutMe #contactInfo img {
-        width: 247px;
-        margin-top: 32px;
+    #contactInfo img {
+        width: 248px;
+        margin-top: 4px;
     }
-
-    .contentAboutMe #contactInfo p {
+    
+    #contactInfo p {
         align-self: center;
+        width: 246px;
     }
 }
 
