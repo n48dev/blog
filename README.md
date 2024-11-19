@@ -18,6 +18,7 @@ This blog is built using the following technologies:
 - **HTML5**: For the structure of the page.
 - **CSS3**: For design and style, including adaptability to different devices through responsive design techniques.
 - **JavaScript**: For polyfills and functionalities.
+- **GitHub Pages**: For hosting.
 
 ## Project structure
 
