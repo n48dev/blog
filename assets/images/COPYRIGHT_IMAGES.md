@@ -10,4 +10,4 @@ These photos are not covered under the GNU General Public License v3.0 used for 
 2. Unauthorized use, reproduction, or distribution of these photos is strictly prohibited.
 3. These photos are for viewing purposes only as part of the content on this blog and cannot be used elsewhere.
 
-If you wish to request permission for any use of these photos, please contact n48dev@gmail.com.
+If you wish to request permission for any use of these photos, please contact contact@n48.dev.
